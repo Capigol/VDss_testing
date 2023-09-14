@@ -402,7 +402,7 @@ def predictions(loaded_model, loaded_desc, X_final1):
     
     X = X_final1[descriptors_model]
     score_predictions = estimator.predict(X)
-
+    score_predictions = 10**score_predictions
     resultado_palanca2, resultado_palanca3  = applicability_domain(X, descriptors_model)
     i = i + 1 
     
